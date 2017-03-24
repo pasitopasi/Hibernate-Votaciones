@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-feb-2017 13:28:59 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJO.Votante" table="votante" catalog="bd_votaciones_amr" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="dni" type="string">
+            <column name="DNI" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="50" not-null="true" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="Apellido" length="50" not-null="true" />
+        </property>
+        <property name="contrasena" type="binary">
+            <column name="Contrasena" not-null="true" />
+        </property>
+        <property name="voto" type="string">
+            <column name="Voto" length="2" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
